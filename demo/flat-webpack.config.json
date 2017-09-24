@@ -2,8 +2,8 @@
   "css": {
     "bundles": {
       "app": {
-        "style": "./assets/css/dev/style.css",
-        "main": "./assets/css/dev/main.css"
+        "main": "./assets/css/dev/main.css",
+        "style": "./assets/css/dev/style.css"
       }
     },
     "config": {
@@ -30,7 +30,16 @@
         "path": "./assets/css/build",
         "filename": "[name].min.js"
       },
-      "plugins": [],
+      "plugins": [
+        {
+          "name": "webpack-css-concat-plugin",
+          "params": [
+            {
+              "filename": "../dist/app.min.css"
+            }
+          ]
+        }
+      ],
       "target": "web"
     }
   },
