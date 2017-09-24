@@ -38,6 +38,9 @@
               "filename": "../dist/app.min.css"
             }
           ]
+        },
+        {
+          "name": "webpack/lib/BannerPlugin"
         }
       ],
       "target": "web"
@@ -80,6 +83,9 @@
           }
         ]
       },
+      "output": {
+        "path": "./assets/js/dist"
+      },
       "plugins": [
         {
           "name": "babel-minify-webpack-plugin"
@@ -88,9 +94,6 @@
           "name": "webpack/lib/BannerPlugin"
         }
       ],
-      "output": {
-        "path": "./assets/js/dist"
-      },
       "target": "web"
     }
   }
