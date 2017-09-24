@@ -1,0 +1,10 @@
+**/.idea
+**/*.bak
+**/cache
+**/node_modules
+**/demo/assets/css/build
+**/demo/assets/css/dist
+**/demo/assets/js/build
+**/demo/assets/js/dist
+**/*.min.js
+**/*.min.js.map

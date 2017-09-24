@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>flat-webpack::demo</title>
+        <link href="assets/css/dist/main.min.css" rel="stylesheet" />
+        <link href="assets/css/dist/style.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1>flat-webpack::demo</h1>
+        </header>
+        <main>
+            <form name="user" action="fragments/response.html" method="get">
+                <fieldset>
+                    <p>
+                        <label for="username">Username</label>
+                        <input name="username" id="username" placeholder="Lcf.vs" />
+                    </p>
+                    <p>
+                        <label for="country">Country</label>
+                        <select name="country" id="country">
+                            <option value="Belgium" selected="selected">Belgium</option>
+                            <option value="France">France</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </p>
+                </fieldset>
+                <button type="submit" class="save">Save</button>
+            </form>
+        </main>
+        <script defer src="assets/js/dist/app.min.js"></script>
+    </body>
+</html>

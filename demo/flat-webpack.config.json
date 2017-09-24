@@ -1,0 +1,88 @@
+{
+  "css": {
+    "bundles": {
+      "app": {
+        "style": "./assets/css/dev/style.css",
+        "main": "./assets/css/dev/main.css"
+      }
+    },
+    "config": {
+      "module": {
+        "loaders": [
+          {
+            "loader": "file-loader",
+            "options": {
+              "name": "../dist/[name].min.css"
+            }
+          },
+          {
+            "loader": "extract-loader"
+          },
+          {
+            "loader": "css-loader",
+            "options": {
+              "minimize": true
+            }
+          }
+        ]
+      },
+      "output": {
+        "path": "./assets/css/build",
+        "filename": "[name].min.js"
+      },
+      "plugins": [],
+      "target": "web"
+    }
+  },
+  "js": {
+    "bundles": {
+      "app": [
+        {
+          "src": "js-polyfills/url.js",
+          "alias": "URL"
+        },
+        {
+          "src": "es6-promise/dist/es6-promise.auto.js",
+          "alias": "Promise"
+        },
+        {
+          "src": "whatwg-fetch",
+          "alias": "fetch"
+        },
+        {
+          "src": "anticore"
+        },
+        {
+          "src": "./assets/js/dev/main.js"
+        }
+      ]
+    },
+    "config": {
+      "devtool": "source-map",
+      "module": {
+        "loaders": [
+          {
+            "loader": "babel-loader",
+            "options": {
+              "presets": [
+                "env"
+              ]
+            }
+          }
+        ]
+      },
+      "plugins": [
+        {
+          "name": "babel-minify-webpack-plugin"
+        },
+        {
+          "name": "webpack/lib/BannerPlugin"
+        }
+      ],
+      "output": {
+        "path": "./assets/js/dist"
+      },
+      "target": "web"
+    }
+  }
+}
