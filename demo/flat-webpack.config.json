@@ -39,9 +39,6 @@
               "filename": "../dist/app.min.css"
             }
           ]
-        },
-        {
-          "name": "webpack/lib/BannerPlugin"
         }
       ],
       "target": "web"
