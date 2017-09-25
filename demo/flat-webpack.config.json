@@ -1,19 +1,20 @@
 {
   "css": {
     "bundles": {
-      "app": {
-        "main": "./assets/css/dev/main.css",
-        "style": "./assets/css/dev/style.css"
-      }
+      "app": [
+        {
+          "src": "./assets/css/dev/main.css"
+        },
+        {
+          "src": "./assets/css/dev/style.css"
+        }
+      ]
     },
     "config": {
       "module": {
         "loaders": [
           {
-            "loader": "file-loader",
-            "options": {
-              "name": "../dist/[name].min.css"
-            }
+            "loader": "file-loader"
           },
           {
             "loader": "extract-loader"
